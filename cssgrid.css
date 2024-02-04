@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 1.5fr 1.2fr 0.7fr;
+    grid-template-areas: 
+    "navbar navbar navbar navbar"
+    "sidebar maincontent maincontent maincontent"
+    "sidebar content1 content2 content3"
+    "sidebar footer footer footer"
+    ;
+    grid-gap: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 13px;
+
+}
+.navbar{
+    background-color: rgb(65, 219, 219);
+    grid-area: navbar;
+}
+.sidebar{
+    background-color: rgba(0, 255, 255, 0.563);
+    grid-area: sidebar;
+}
+.maincontent{
+    background-color: rgb(145, 229, 229);
+    grid-area: maincontent;
+}
+.content1{
+    background-color: rgba(157, 254, 254, 0.821);
+    grid-area: content1;
+}
+.content2{
+    background-color: rgb(156, 232, 232);
+    grid-area: content2;
+
+}
+.content3{
+    background-color: rgb(37, 206, 206);
+    grid-area: content3;
+}
+.footer{
+    background-color: rgb(10, 219, 219);
+    grid-area: footer;
+}
+
+@media screen and (max-width: 550px) {
+    body {
+      background-color: rgb(11, 17, 11);
+    }
+    .container{
+        grid-template-columns: 1fr ;
+        grid-template-rows: 0.7fr 0.7fr 1.9fr 1.3fr 1.3fr 1.3fr 1.2fr;
+        grid-template-areas: 
+        " navbar"
+        "sidebar"
+        "maincontent"
+        "content1"
+        "content2"
+        "content3"
+        "footer";
+        font-weight: 550;
+        font-size: 12px;
+       
+  }
+}
